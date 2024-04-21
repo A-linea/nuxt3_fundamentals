@@ -14,7 +14,7 @@
     <template v-slot:items>
       <li v-for="item in todoList">
         <input class="inline-block mr-[30px]" type="checkbox" :checked="item.completed">
-        <NuxtLink :to="route.path + '/' + item.id">{{item.title}}</NuxtLink>
+        <NuxtLink :to="'/display/todos' + '/' + item.id">{{item.title}}</NuxtLink>
       </li>
     </template>
   </GenericComponent>
