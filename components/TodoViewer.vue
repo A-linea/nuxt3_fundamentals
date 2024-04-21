@@ -14,7 +14,7 @@
     <template v-slot:items>
       <li v-for="item in todoList">
         <input class="inline-block mr-[30px]" type="checkbox" :checked="item.completed">
-        <span>{{item.title}}</span>
+        <NuxtLink :to="route.path + '/' + item.id">{{item.title}}</NuxtLink>
       </li>
     </template>
   </GenericComponent>
@@ -30,8 +30,8 @@ defineProps({
     default: 'Todo Viewer'
   },
 })
-
-
+const route = useRoute();
+console.log(route)
 const todoList = ref([]);
 const numbersOfTodos = computed(() => todoList.value.length)
 const finishedTodos = computed(() => todoList.value.filter(todo => todo.completed).length)

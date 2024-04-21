@@ -5,6 +5,7 @@ import TodoViewer from "~/components/TodoViewer.vue";
 </script>
 
 <template>
+  <Title>Photos</Title>
   <div class="container pt-4 mx-auto">
     <div class="flex flex-row justify-between">
       <PhotoGallery title="Photo Gallery List" />
